@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <bds />
+    <link rel="stylesheet" href="index.css" />
+    <script src="index.js" defer></script>
+    <title>Music Player Project</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="background"></div>
+      <div class="body">
+        <div class="song-info">
+          <img class="img" src="assets/468-thumbnail.png" alt="" srcset="" />
+          <p class="song-name">Cool of the Summer</p>
+        </div>
+        <div class="bottom">
+          <div class="controls">
+            <div class="control-main">
+              <div class="control-btn">
+                <img src="assets/icons/replay-icon.svg" alt="" class="replay" />
+                <img
+                src="assets/icons/previous-icon.svg"
+                alt=""
+                class="previous-icon"
+                />
+                
+                <img
+                src="assets/icons/play-icon.svg"
+                onclick="playPause()"
+                alt=""
+                class="play-icon"
+                />
+                <img
+                src="assets/icons/next-icon.svg"
+                alt=""
+                class="next-icon"
+                />
+                <img
+                src="assets/icons/repeat-icon.svg"
+                alt=""
+                class="repeat-icon"
+                />
+              </div>
+              <div class="sound">
+                <audio src="assets/audio.mp3" id="song"></audio>
+                <img
+                src="assets/icons/sound-on-icon.svg"
+                alt=""
+                  class="sound-img"
+                  />
+                  <input
+                  type="range"
+                  min="0"
+                  max="1"
+                  step="0.01"
+                  value="1"
+                  id="volume-slider"
+                  class="sound-progress-bar"
+                  />
+                </div>
+            </div>
+            
+            <div class="timeline">
+              <span id="current-time">00:00</span>
+              <input
+              type="range"
+              min="0"
+              max="1"
+              step="0.01"
+              value="0"
+              class="timeline-bar"
+              />
+              <span id="duration"></span>
+            </div>
+          </div>
+          
+          <hr />
+          <div class="upload-container">
+            <label class="upload-label" for="fileUpload">
+              Upload |
+              <span id="fileName">No file chosen</span>
+            </label>
+            <input type="file" id="fileUpload" accept=".mp3" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
